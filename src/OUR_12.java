@@ -111,10 +111,10 @@ public class OUR_12 extends DriverClass {
                 "long and hard!"));
         
         //After confirming the deletion, I should receive a notification that my account has been successfully deleted.
-        //I should assert that my account has been successfully deleted and automatically logged out.
         WebElement deleteAccountConfirmation = driver.findElement(By.xpath("(//button[text()=\"delete account\"])[1]"));
         deleteAccountConfirmation.click();
-        
+
+        //I should assert that my account has been successfully deleted and automatically logged out.
         WebElement signInButtonAfterDeletion = driver.findElement(By.cssSelector("a[data-test=\"signIn\"]"));
         Assert.assertTrue(signInButtonAfterDeletion.isDisplayed());
         
