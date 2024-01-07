@@ -55,8 +55,8 @@ public class OUR_12 extends DriverClass {
         WebElement joinMyLidlSubmit = driver.findElement(By.xpath("//button[text()=\"join myLidl\"]"));
         joinMyLidlSubmit.click();
         
-//        MyMethods.myWait(5);
-//        waitAndQuit();
+        MyMethods.myWait(3);
+        waitAndQuit();
     }
     
     @Test
@@ -114,5 +114,11 @@ public class OUR_12 extends DriverClass {
         //I should assert that my account has been successfully deleted and automatically logged out.
         WebElement deleteAccountConfirmation = driver.findElement(By.xpath("(//button[text()=\"delete account\"])[1]"));
         deleteAccountConfirmation.click();
+        
+        WebElement signInButtonAfterDeletion = driver.findElement(By.cssSelector("a[data-test=\"signIn\"]"));
+        Assert.assertTrue(signInButtonAfterDeletion.isDisplayed());
+        
+        MyMethods.myWait(3);
+        waitAndQuit();
     }
 }
