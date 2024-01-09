@@ -1,5 +1,6 @@
 package Task2;
 
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,8 @@ import utilities.MyMethods;
 
 public class Task2 extends DriverClass {
 
-    public static void main(String[] args) {
+    @Test
+    public  void Task2() {
 
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.lidl.com/");
