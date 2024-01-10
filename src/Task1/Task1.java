@@ -27,7 +27,7 @@ public class Task1 extends utilities.DriverClass {
     public void join(){
         driver.get("https://www.lidl.com/login");
 
-        utilities.MyMethods.myWait(3);
+
 
         WebElement join_myLidl = driver.findElement(By.linkText("join myLidl"));
         join_myLidl.click();
